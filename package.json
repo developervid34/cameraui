@@ -8,6 +8,7 @@
     "watch": "concurrently \"npm run watch:server\" \"npm run watch:ui\"",
     "watch:server": "nodemon",
     "watch:ui": "cross-env NODE_OPTIONS=--openssl-legacy-provider && npm run serve --prefix ui",
+    "start:ui":"node server.js",
     "build": "npm run build --prefix ui",
     "lint": "concurrently \"npm run lint:server\" \"npm run lint:ui\"",
     "lint:server": "eslint --fix .",
