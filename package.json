@@ -4,10 +4,10 @@
   "description": "NVR like user interface for RTSP capable cameras.",
   "author": "SeydX (https://github.com/SeydX/camera.ui)",
   "scripts": {
-    "start": "NODE_OPTIONS=--openssl-legacy-provider && npm run watch",
+    "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider && npm run watch",
     "watch": "concurrently \"npm run watch:server\" \"npm run watch:ui\"",
     "watch:server": "nodemon",
-    "watch:ui": "NODE_OPTIONS=--openssl-legacy-provider && npm run serve --prefix ui",
+    "watch:ui": "cross-env NODE_OPTIONS=--openssl-legacy-provider && npm run serve --prefix ui",
     "build": "npm run build --prefix ui",
     "lint": "concurrently \"npm run lint:server\" \"npm run lint:ui\"",
     "lint:server": "eslint --fix .",
